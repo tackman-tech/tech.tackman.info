@@ -67,16 +67,15 @@ Threading tail macro (->>) は、式の配置先が最初の引数でなく最�
 ```
 
 ```Hy
-(defn tensor-view [t &rest args] ((. t view) args))
-(defn tensor-permute [t &rest args] ((. t permute) args))
-(defn tensor-contiguous [t] ((. t contiguous)))
+;;; threading macroをクラスインスタンスのメソッドで利用するためのマクロ
+(defmacro/g! *-> [f &rest xs] `(fn [g!ob] ((. g!ob ~f) ~@xs)))
 
 (defn forward [self z truncation]
     (with [(torch.no_grad)]
       (-> (self.G.gen_z z)
-          (tensor-view -1 4 4 (* 16 self.G.config.channel_width))
-          (tensor-permute 0 3 1 2)
-          (tensor-contiguous)
+          ((*-> view -1 4 4 (* 16 self.g.config.channel_width)))
+          ((*-> permute 0 3 1 2))
+          ((*-> contiguous))
 
           (layers-forward self.G.layers z truncation)
 
@@ -85,6 +84,13 @@ Threading tail macro (->>) は、式の配置先が最初の引数でなく最�
           (self.G.conv_to_rgb)
           (get [(slice None None) (slice None 3) ,,,])
 (self.G.tanh))))
+
+(defn layers-forward [z* layers z truncation]
+  (for [layer layers]
+    (cond [(in "GenBlock" layer.__class__.__name__) (setv z* (layer z* z truncation))]
+          [True (setv z* (layer z*))]))
+  z*)
+ 
 ```
 
 Python版では z = … を毎行書いていたのが、Hy版では一時変数と代入がforward関数中からは撲滅できています
@@ -92,11 +98,6 @@ Python版では z = … を毎行書いていたのが、Hy版では一時変数
 1引数関数の呼び出しでチェインする部分は特に見通しが良くなっているのではないでしょうか。
 
 一時変数を使わないとネストが深くなってコードが見づらくなる場合には、-> や ->> の使用は検討の価値があると思います。
-
-## 本記事でやっていないこと
-
-- 関数を取って引数位置を入れ替える汎用マクロ
-  - ドット (. obj method arg) を使ったアクセスをマクロで汎用化する方法が分からないので、詳しい方がいたら教えてほしいです
 
 ## 本文について
 
