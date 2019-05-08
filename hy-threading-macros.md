@@ -1,6 +1,6 @@
 # Hy threading macro の紹介
 
-http://docs.hylang.org/en/stable/language/api.html#id2
+[-> (or the threading macro)](http://docs.hylang.org/en/stable/language/api.html#id2)
 
 Hyにはthreading macro（->, ->>）が標準で用意されています。
 これらを使うと、Pythonでは一時変数と再代入が必要だったコードがそれらなしできれいに書けることがあります。
@@ -40,6 +40,8 @@ Threading tail macro (->>) は、式の配置先が最初の引数でなく最�
 
 挙動は分かったとして、これだけだと有用性がピンと来ないかもしれません。ここでは私がPythonからHyに移植したコードを比較してみます。
 
+[(こちらより引用)](https://github.com/huggingface/pytorch-pretrained-BigGAN/blob/6ae20a35a051816d66811d85597033623a8ac888/pytorch_pretrained_biggan/model.py#L228)
+
 ```python
     def forward(self, cond_vector, truncation):
         z = self.gen_z(cond_vector)
@@ -63,7 +65,6 @@ Threading tail macro (->>) は、式の配置先が最初の引数でなく最�
         z = self.tanh(z)
         return z
 ```
-(from: https://github.com/huggingface/pytorch-pretrained-BigGAN/blob/6ae20a35a051816d66811d85597033623a8ac888/pytorch_pretrained_biggan/model.py#L228)
 
 ```Hy
 (defn tensor-view [t &rest args] ((. t view) args))
@@ -91,6 +92,11 @@ Python版では z = … を毎行書いていたのが、Hy版では一時変数
 1引数関数の呼び出しでチェインする部分は特に見通しが良くなっているのではないでしょうか。
 
 一時変数を使わないとネストが深くなってコードが見づらくなる場合には、-> や ->> の使用は検討の価値があると思います。
+
+## 本記事でやっていないこと
+
+- 関数を取って引数位置を入れ替える汎用マクロ
+  - ドット (. obj method arg) を使ったアクセスをマクロで汎用化する方法が分からないので、詳しい方がいたら教えてほしいです
 
 ## 本文について
 
