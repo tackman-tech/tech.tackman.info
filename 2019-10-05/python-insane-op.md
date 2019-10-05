@@ -13,8 +13,8 @@ print(a)
 True
 ```
 
-になる。 s in x の評価結果は False で、PythonではFalseと0は等価に扱われる。
-そのため False in [0, 4, 5] は True になり何もおかしくない、ように見える。
+になる。 'Some string' in [1, 2, 3] の評価結果は False で、PythonではFalseと0は等価に扱われる。
+そのため 0 in [0, 4, 5] は True になり何もおかしくない、ように見える。
 
 では次のコードはどうなるだろうか。
 
