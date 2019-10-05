@@ -93,8 +93,9 @@ https://docs.python.org/3/reference/expressions.html#comparisons
 
 ```
 
-https://twitter.com/todesking/status/1178628914987466752
-https://twitter.com/todesking/status/1178629615188725760
+[https://twitter.com/todesking/status/1178628914987466752](https://twitter.com/todesking/status/1178628914987466752)
+[https://twitter.com/todesking/status/1178629615188725760](https://twitter.com/todesking/status/1178629615188725760)
+
 
 
 - in演算子は比較演算子の一種である
