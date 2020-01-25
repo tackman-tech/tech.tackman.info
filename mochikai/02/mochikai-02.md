@@ -52,7 +52,7 @@ marp: true
 
 # 実例
 
-![](img/in01.jpg) ![](img/in02.jpg)  ![](img/all.png)
+![](img/all.png)
 
 ---
 
