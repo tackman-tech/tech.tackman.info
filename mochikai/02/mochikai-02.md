@@ -52,7 +52,9 @@ marp: true
 
 # 実例
 
-（ここに画像かURLを貼ります）
+![](img/in01.jpg) ![](img/in02.jpg)  ![](img/in03.jpg)
+![](img/out01.jpg) ![](img/out02.jpg)  ![](img/out03.jpg)
+
 
 ---
 
