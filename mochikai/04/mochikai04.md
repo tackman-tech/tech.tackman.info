@@ -222,6 +222,15 @@ What you are referring to is opencv.js, which is a completely different project.
 
 ---
 
+# ついでのアイディアメモ
+
+- HSVでレスポンスを返したい時、みなしRGBにしてPNGやJPEGで圧縮をかければ帯域節約できるのでは？
+  - 未検証
+- 今回のアプリではそもそもフロントで画像デコードどうするのか問題があるので、採用しても問題解決しないです
+  - まともな画像デコーダがなかったのもOpenCV採用理由の1つ
+
+---
+
 # 感想
 
 - TypeScriptの文明を全身で感じた
