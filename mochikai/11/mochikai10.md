@@ -49,6 +49,7 @@ https://www.youtube.com/watch?v=zL0kemiI0yc&feature=youtu.be
   - 歴史知識がないとノリにくいEuropa UniversalisやHearts of Ironに比べて敷居は低いと思います
   - スター・ウォーズや銀河英雄伝説に由来するあれこれもあったりする（次スライド）
 - コミュニティ翻訳の日本語化は毎回リリースとほぼ同時に提供されるので、英語苦手ニキにも安心
+- コロナで強制引きこもりライフのお供に最適
 
 ---
 
