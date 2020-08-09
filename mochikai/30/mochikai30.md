@@ -61,10 +61,11 @@ marp: true
   - 「趣味ボドゲじゃなくて趣味テラフォ」
   - 半分くらいはCivBG本作ってた頃から一緒
 - メンバーの文章作成能力とITスキルはかなりまちまち
-  - パソコン使えません＞＜という人はいない
-  - gitだのマークアップだのエンジニアがよく使うアレは基本知らない
+  - 流石にパソコン使えません＞＜という人はいない
+  - gitだのマークアップだのエンジニアがよく使うツールは基本知らない
   - 一人で文章を仕上げまでできない人が多数派
     - 文章とITインフラで1～2名ずつ基幹技術持ちがいる感じ
+- ボドゲのプレイスキルは高めで揃っている
 
 こういう感じのメンバーが5人～10人くらい集まって原稿執筆をしている
 
@@ -100,6 +101,8 @@ marp: true
 
 - git push されると GitLab CI で自動的にビルドが走るシステムになってる
 - Re:View公式がDcokerイメージを用意済みなので、比較的簡単に構築可能
+  - review-pdfmaker でPDFが直接生成できる
+- 10行程度の設定ファイルで完結する
 
 CIビルドはやらない理由がないレベルで楽です
 
@@ -134,6 +137,21 @@ CIビルドはやらない理由がないレベルで楽です
 
 ---
 
+# 使おう、Re:Viewで執筆
+
+テキストメインの本では試す価値があります
+
+---
+
 # 参考文献
+
+- GitLab CI https://docs.gitlab.com/ee/ci/
+- Re:View image for Docker https://github.com/vvakame/docker-review
+- ボードゲームブレイカーズ
+  - テラフォーミングマーズ攻略本 https://w.atwiki.jp/bga9997/pages/142.html
+  - ウィングスパン攻略本 https://birds.bgb.cards/
+- 伊川清三さん @s_igawa https://twitter.com/s_igawa
+- カタンフリークス https://www.catanfreaks.com/
+- CivBGeeks https://civbgeeks.net/
 
 間に合わなかったから後で追記します
