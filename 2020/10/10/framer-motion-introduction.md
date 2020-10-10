@@ -1,5 +1,7 @@
 # React / Framer MotionでCSSアニメーション
 
+※本記事はzennに投稿した記事のミラーです。 https://zenn.dev/tkmn/articles/e0d75cab7f942c7cd819
+
 ReactでCSSアニメーションをするライブラリ、Framer Motionの紹介です。
 https://www.framer.com/motion/
 
