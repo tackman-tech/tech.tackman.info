@@ -10,7 +10,14 @@ marp: true
 
 ---
 
-# Fine Art Datasetづくり
+# やったこと
+
+## 北海道ボドゲ博のサークルカット
+
+- 7.24に札幌で開催されるボドゲ即売会
+- off-boxとJ.C.クリエイツが合同出展予定だよ
+
+## Fine Art Datasetづくり
 
 ### ...のための準備
 
@@ -68,6 +75,7 @@ marp: true
 
 # 参考文献
 
+- 北海道ボドゲ博 https://psykorokinesis.wixsite.com/hokbdgexpo
 - Firebase クライアントSDKのissues
   - https://github.com/firebase/firebase-js-sdk/issues
 - jsdom https://github.com/jsdom/jsdom
