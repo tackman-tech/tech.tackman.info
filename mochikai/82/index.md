@@ -70,3 +70,15 @@ marp: true
   - そんなペースで間に合うのか？
 
 ![height:200px](./concepts.png)
+
+---
+
+# 雑談：ロフティースマイル、出走です！
+
+### 2/6(日) 小倉2R 3歳未勝利牝馬限定芝1800m
+
+https://race.netkeiba.com/race/shutuba.html?race_id=202210010802&rf=shutuba_submenu
+
+5枠9番でいいところもらいました！
+鞍上が見習いジョッキーということでトップハンデと斤量-3kg
+グリーンチャンネルに課金しなきゃ・・・
